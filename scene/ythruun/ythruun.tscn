@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://script/ythruun/ythruun.gd" type="Script" id=1]
+
+[node name="Ythruun" type="Node2D" index="0"]
+
+modulate = Color( 0.631373, 0, 0, 1 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Material", "Visibility" ]
+
+

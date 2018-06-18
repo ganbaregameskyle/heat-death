@@ -1,0 +1,209 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://script/ythruun/title.gd" type="Script" id=1]
+[ext_resource path="res://img/effect.png" type="Texture" id=2]
+[ext_resource path="res://img/logo.png" type="Texture" id=3]
+[ext_resource path="res://img/title.png" type="Texture" id=4]
+
+[sub_resource type="Shader" id=1]
+
+code = "shader_type canvas_item;
+
+uniform float fade;
+uniform sampler2D effect;
+
+void fragment() {
+	vec4 t = texture(TEXTURE, UV);
+	COLOR = vec4(t.rgb, t.a * min(1.0, (texture(effect, UV).r - 0.5) * 2.0 + fade));
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+
+render_priority = 0
+shader = SubResource( 1 )
+shader_param/fade = 2.0
+shader_param/effect = ExtResource( 2 )
+_sections_unfolded = [ "shader_param" ]
+
+[sub_resource type="ShaderMaterial" id=3]
+
+render_priority = 0
+shader = SubResource( 1 )
+shader_param/fade = 2.0
+shader_param/effect = ExtResource( 2 )
+_sections_unfolded = [ "shader_param" ]
+
+[sub_resource type="CircleShape2D" id=4]
+
+custom_solver_bias = 0.0
+radius = 1183.31
+
+[sub_resource type="Animation" id=5]
+
+length = 0.75
+loop = false
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("Logo:material:shader_param/fade")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.75 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 2.0, -2.0 ]
+}
+
+[sub_resource type="Animation" id=6]
+
+resource_name = "kill"
+length = 2.25
+loop = false
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("Title2:material:shader_param/fade")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.25, 2.25 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 2.0, 2.0, -2.0 ]
+}
+
+[node name="Title" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Pause" ]
+
+[node name="Logo" type="Sprite" parent="." index="0"]
+
+material = SubResource( 2 )
+position = Vector2( 40.2706, 40.528 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Material" ]
+
+[node name="Title0" type="Sprite" parent="." index="1"]
+
+material = SubResource( 3 )
+position = Vector2( -547.846, -1818.17 )
+rotation = -0.0349066
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Title1" type="Sprite" parent="." index="2"]
+
+material = SubResource( 3 )
+position = Vector2( -2240.23, 566.191 )
+rotation = 0.0349066
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Title2" type="Sprite" parent="." index="3"]
+
+material = SubResource( 3 )
+position = Vector2( 1928.1, -390.096 )
+rotation = -0.159553
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Material", "Transform" ]
+
+[node name="Title3" type="Sprite" parent="." index="4"]
+
+material = SubResource( 3 )
+position = Vector2( 778.546, 2054.48 )
+rotation = 0.0354329
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Material", "Transform" ]
+
+[node name="Area0" type="Area2D" parent="." index="5"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Area0" index="0"]
+
+position = Vector2( -572.002, -1818.97 )
+shape = SubResource( 4 )
+
+[node name="Area1" type="Area2D" parent="." index="6"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Area1" index="0"]
+
+position = Vector2( 1933.37, -394.681 )
+shape = SubResource( 4 )
+
+[node name="Area2" type="Area2D" parent="." index="7"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Area2" index="0"]
+
+position = Vector2( 772.203, 2059.21 )
+shape = SubResource( 4 )
+
+[node name="Area3" type="Area2D" parent="." index="8"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Area3" index="0"]
+
+position = Vector2( -2265.13, 594.882 )
+shape = SubResource( 4 )
+
+[node name="Timer" type="Timer" parent="." index="9"]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = false
+autostart = false
+
+[node name="LogoAniPlayer" type="AnimationPlayer" parent="." index="10"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/kill = SubResource( 5 )
+blend_times = [  ]
+
+[node name="TitleAniPlayer" type="AnimationPlayer" parent="." index="11"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/kill = SubResource( 6 )
+blend_times = [  ]
+
+

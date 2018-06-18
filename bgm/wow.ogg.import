@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/wow.ogg-435af108a3bb9f049468da3c32bcc7a6.oggstr"
+
+[deps]
+
+source_file="res://bgm/wow.ogg"
+dest_files=[ "res://.import/wow.ogg-435af108a3bb9f049468da3c32bcc7a6.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

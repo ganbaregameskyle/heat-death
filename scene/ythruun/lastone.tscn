@@ -1,0 +1,183 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://script/ythruun/lastone.gd" type="Script" id=1]
+[ext_resource path="res://img/triangle.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 224.0
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "die"
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("TriangleB:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -166.277, 96 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TriangleF:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 166.277, 96 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TriangleA:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 192 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("TriangleE:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 166.277, -96 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("TriangleC:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -166.277, -96 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("TriangleD:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -6.10301e-06, -192 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath(".:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "method"
+tracks/7/path = NodePath(".")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "queue_free"
+} ]
+}
+
+[node name="LastOne" type="Area2D" index="0"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Material", "Visibility" ]
+
+[node name="TriangleA" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+offset = Vector2( 0, 90 )
+_sections_unfolded = [ "Material", "Offset", "Transform", "Visibility" ]
+
+[node name="TriangleB" type="Sprite" parent="." index="1"]
+
+rotation = 1.0472
+texture = ExtResource( 2 )
+offset = Vector2( 0, 90 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="TriangleC" type="Sprite" parent="." index="2"]
+
+rotation = 2.0944
+texture = ExtResource( 2 )
+offset = Vector2( 0, 90 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="TriangleD" type="Sprite" parent="." index="3"]
+
+rotation = -3.14159
+texture = ExtResource( 2 )
+offset = Vector2( 0, 90 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="TriangleE" type="Sprite" parent="." index="4"]
+
+rotation = -2.09439
+texture = ExtResource( 2 )
+offset = Vector2( 0, 90 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="TriangleF" type="Sprite" parent="." index="5"]
+
+rotation = -1.0472
+texture = ExtResource( 2 )
+offset = Vector2( 0, 90 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="CollisionShape" type="CollisionShape2D" parent="." index="6"]
+
+shape = SubResource( 2 )
+
+[node name="AniPlayer" type="AnimationPlayer" parent="." index="7"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/die = SubResource( 1 )
+blend_times = [  ]
+
+

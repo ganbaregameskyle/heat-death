@@ -1,0 +1,279 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://script/ythruun/goddess.gd" type="Script" id=1]
+[ext_resource path="res://img/goddess/head.png" type="Texture" id=2]
+[ext_resource path="res://img/goddess/hairleft.png" type="Texture" id=3]
+[ext_resource path="res://img/goddess/hairright.png" type="Texture" id=4]
+[ext_resource path="res://img/goddess/boobs.png" type="Texture" id=5]
+[ext_resource path="res://img/goddess/arm.png" type="Texture" id=6]
+[ext_resource path="res://img/goddess/bottom.png" type="Texture" id=7]
+[ext_resource path="res://img/goddess/leg.png" type="Texture" id=8]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "idle"
+length = 4.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Head/HairRight:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 22.2023, -349.132 ), Vector2( 24.0999, -367.942 ), Vector2( 22.2023, -349.132 ), Vector2( 24.0999, -367.942 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Head/HairRight:rotation_degrees")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -24.8666, -14.1154, -24.8666, -14.1154 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Head:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -130.909, -236.265 ), Vector2( -130.909, -96.2655 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Head:rotation_degrees")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -3.00251, 6.76803, -3.00251, 6.76803 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Head/Boobs:position")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -9.80898, -8.72801 ), Vector2( 6.96457, -6.58878 ), Vector2( -9.80898, -8.72801 ), Vector2( 6.96457, -6.58878 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Head/Boobs:rotation_degrees")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -1.27503, -5.98215, -1.27503, -5.98215 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Head/Boobs/Bottom:position")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 94.0381, 263.204 ), Vector2( 85.7058, 264.637 ), Vector2( 94.0381, 263.204 ), Vector2( 85.7058, 264.637 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Head/Boobs/Bottom:rotation_degrees")
+tracks/7/interp = 2
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0430771, -11.106, 0.0430771, -11.106 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Head/Boobs/Arm:position")
+tracks/8/interp = 2
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -53.1615, 61.9572 ), Vector2( -60.7805, 63.7745 ), Vector2( -53.1615, 61.9572 ), Vector2( -60.7805, 63.7745 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Head/Boobs/Arm:rotation_degrees")
+tracks/9/interp = 2
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -3.56351, 4.82007, -3.56351, 4.82007 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Head/HairLeft:position")
+tracks/10/interp = 2
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 9.97507, -405.681 ), Vector2( -14.9343, -405.508 ), Vector2( 9.97507, -405.681 ), Vector2( -14.9343, -405.508 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Head/HairLeft:rotation_degrees")
+tracks/11/interp = 2
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 9.89814, -5.76919, 9.89814, -5.76919 ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Head/Boobs/Bottom/Leg:position")
+tracks/12/interp = 2
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 137.306, -30.0926 ), Vector2( 131.261, -27.1999 ), Vector2( 137.306, -30.0926 ), Vector2( 131.261, -27.1999 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Head/Boobs/Bottom/Leg:rotation_degrees")
+tracks/13/interp = 2
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 4.62653, -1.00546, 4.62653, -1.00546 ]
+}
+
+[sub_resource type="CircleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 1024.0
+
+[node name="Goddess" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="Head" type="Sprite" parent="." index="0"]
+
+position = Vector2( -130.909, -236.265 )
+rotation = -0.0524037
+texture = ExtResource( 2 )
+offset = Vector2( 57.7199, -148.997 )
+
+[node name="HairLeft" type="Sprite" parent="Head" index="0"]
+
+position = Vector2( 9.97507, -405.681 )
+rotation = 0.172755
+texture = ExtResource( 3 )
+offset = Vector2( -242.891, 424.453 )
+
+[node name="HairRight" type="Sprite" parent="Head" index="1"]
+
+position = Vector2( 22.2023, -349.132 )
+rotation = -0.434004
+texture = ExtResource( 4 )
+offset = Vector2( 158.021, 194.934 )
+
+[node name="Boobs" type="Sprite" parent="Head" index="2"]
+
+position = Vector2( -9.80898, -8.72801 )
+rotation = -0.0222534
+texture = ExtResource( 5 )
+offset = Vector2( 58.5766, 117.386 )
+
+[node name="Arm" type="Sprite" parent="Head/Boobs" index="0"]
+
+position = Vector2( -53.1615, 61.9572 )
+rotation = -0.062195
+scale = Vector2( 1, 1 )
+texture = ExtResource( 6 )
+offset = Vector2( -36.5241, 133.316 )
+
+[node name="Bottom" type="Sprite" parent="Head/Boobs" index="1"]
+
+position = Vector2( 94.0381, 263.204 )
+rotation = 0.000751838
+texture = ExtResource( 7 )
+offset = Vector2( 336.215, 208.961 )
+
+[node name="Leg" type="Sprite" parent="Head/Boobs/Bottom" index="0"]
+
+position = Vector2( 137.306, -30.0926 )
+rotation = 0.0807481
+texture = ExtResource( 8 )
+offset = Vector2( 236.782, 120.03 )
+
+[node name="AniPlayer" type="AnimationPlayer" parent="." index="1"]
+
+root_node = NodePath("..")
+autoplay = "idle"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/idle = SubResource( 1 )
+blend_times = [  ]
+
+[node name="Area" type="Area2D" parent="." index="2"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Area" index="0"]
+
+shape = SubResource( 2 )
+
+[node name="Tween" type="Tween" parent="." index="3"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+
